@@ -75,7 +75,8 @@ main {
 }
 
 .blogs {
-  max-width: 100vw;
+  margin: 0 auto;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -83,9 +84,9 @@ main {
 
 .blogs article {
   background-color: rgb(38, 135, 127);
-  max-width: 100vw;
-  padding: 1vw;
-  margin: 1vw;
+  max-width: 100%;
+  padding: 0.5rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -102,13 +103,16 @@ main {
 }
 
 .blogs img {
+  width: 100%;
   max-width: 100%;
+  object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 0.5vw;
   background-color: rgb(240, 248, 255);
 }
 
 .blogs p {
+  margin: 0.5rem 0;
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   font-weight: 400;
@@ -135,6 +139,75 @@ footer p {
   display: inline-flex;
   align-items: end;
   color: rgb(255, 255, 255);
-  margin-right: 7%;
   margin-bottom: 1%;
+}
+
+.copyrights {
+  flex-basis: 35%;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  padding-bottom: 0.3rem;
+}
+
+@media (max-width: 700px) {
+  header img {
+    max-width: 15%;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0.5rem;
+  }
+
+  li {
+    text-align: center;
+    background-color: hsl(174, 38%, 30%);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: #e6e6e6;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .blogs {
+    flex-direction: column;
+  }
+
+  nav {
+    background-color: inherit;
+  }
+
+  .blogs article {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  footer {
+    padding: 1rem 0;
+    justify-content: space-evenly;
+  }
+
+  footer img {
+    margin: 0;
+    padding: 0;
+    object-fit: scale-down;
+    max-width: 8%;
+  }
+
+  .copyrights {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
 }
